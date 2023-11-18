@@ -2127,9 +2127,9 @@ git push --set-upstream origin feature/msp-18
 ```
 ```bash
 PATH="$PATH:/usr/local/bin"
-APP_REPO_NAME="petclinic-helm-charts-murat" # Write your own repo name
+APP_REPO_NAME="clarusway-repo/petclinic-app-dev" # Write your own repo name
 AWS_REGION="us-east-1" #Update this line if you work on another region
-ECR_REGISTRY="563299227253.dkr.ecr.us-east-1.amazonaws.com/clarusway-repo/petclinic-app-dev" # Replace this line with your ECR name
+ECR_REGISTRY="046402772087.dkr.ecr.us-east-1.amazonaws.com" # Replace this line with your ECR name
 aws ecr create-repository \
     --repository-name ${APP_REPO_NAME} \
     --image-scanning-configuration scanOnPush=false \
@@ -2536,7 +2536,7 @@ eksctl version
 - Download the Amazon EKS vended kubectl binary.
 
 ```bash
-curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.7/2023-11-14/bin/linux/amd64/kubectl
 ```
 
 - Apply execute permissions to the binary.
@@ -2592,7 +2592,7 @@ eksctl create cluster -f cluster.yaml
 
 ```bash
 export PATH=$PATH:$HOME/bin
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.0/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
 ```
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
